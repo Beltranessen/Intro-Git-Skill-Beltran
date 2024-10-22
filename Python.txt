@@ -1,0 +1,201 @@
+				
+				
+						***************** PHYTON ********************************
+						
+						
+						
+		1. PALABRAS MÁGICAS
+			A. type
+			B. dir
+			C. help
+			
+		2. Uso de metódos para STRING
+		
+			palabra = "Manzana"
+			
+			A. palabra.upper() 		-> "MANZANA"
+			B: str.upper(palabra) 	-> "MANZANA"
+			
+			C: INTERPORLACION DE CADENAS: 		frase = f"Hola {nombre} , tienes {edad} años"
+			
+		3. LISTAS []: Las listas son mutables, es decir, cualquier método que se le aplica actualiza la lista
+			
+			*** DECLARACION:
+				frutas = ["plátano","caki","melón"]
+			
+			METODOS:
+			frutas.sort()
+			print(frutas) -> caki, melón, plátano
+			
+			
+		4. TUPLAS  (): No son modificables. Una vez creadas no pueden cambiar sus elementos ni su tamaño. son INMUTABLES
+			Su objetivo es almacenar información diversa sobre un mismo objeto, es decir, puede tener objetos de distintos tipos (a diferencia de las listas)
+		
+			*** DECLARACION:
+				t = 1, 2 
+				t1 = (1,2)
+			
+			*** DESEMPAQUETAR (se puede hacer en listas y en tuplas)
+			
+				v1, v2 = t1 -> asigna v1= 1, v2 = 2
+				
+			---------------------------------------------------------
+			*** Se pueden crear tuplas de tuplas. Ejemplo:
+			
+			tnombre = ("Alfonso", "Martinez", 55)
+			tfecha = (1969, 6, 12)
+			tuser = (tnombre, tfecha)
+			
+			print(tuser[1][0]) -> 1969
+			
+			----------------------------------------------------------------------
+				
+			*** Ejemplo asignar valores de una tupla a variables:
+			
+				auto = ("Ford","Fiesta","Rojo", 2021, 5, 1.6)
+				(Marca, Tipo, Color, Modelo, Puertas, Cilindrada) = auto
+				Print(Marca) -> Ford
+			----------------------------------------------------------------------
+			
+		5. DICCIONARIOS {} : conformado por pareja CLAVE/VALOR 
+		
+			*** DECLARACION
+				colores = {}
+				edades = {"Juan":25,"Pedro":33}
+				
+			-- ACCEDER A UNA CLAVE
+			
+				print(edades["Juan"]) --> 25
+				
+				print(edades.get("Juan")) --> 25
+				
+				
+			-- Actualizar una objeto :
+			edades.update({"Juan":44}) --> Juan tendrá 44
+			
+			
+				
+				
+		6. BOOL Y OPERADORES BOOLEANOS
+		
+					c = True
+					d = False
+					
+					x = 5
+					z = 8
+					y = 9
+					
+					print(x != z and z<y)
+					
+		7. ESTRUCTURAS DE CONTROL
+		
+			amigos = ["Juan", "Ana", "Laura"]
+			nombre = input("Dime un nombre: ")
+			
+			if nombre in amigos:
+				print(nombre + " es tu amigo")
+				
+			print("Esto lo va a imprimir siempre porque PYTHON maneja la SANGRIA para saber si está dentro de una estructura de control)
+			
+			if temperatura < 10:
+				print("Hace frio")
+			elif temperatura < 20:
+				print("Se puede estar en la calle")
+			elif temperatura <=25:
+				print("Se está genial")
+			else:
+				print("Hace calor")
+		
+		8. Práctica agenda con diccionarios
+		
+			1. Añadir un contacto
+			2. Buscar un concacto
+			3. Editar un contacto
+			4. Eliminar un contacto
+			5. Mostrar todos los contactos
+			
+			
+			Crear 2 celdas :
+				1. Crear una agenda vacía
+				2. Mostrar las opciones
+					Pedirle al usuario que elija 1 opcion
+					Crear una estructura de control para que ejecute bloque de código segun la opción
+					
+			
+		9. LOOPS: FOR
+		paises = ["Argentina","Colombia","Perú","Ecuador","México"]
+		for p in paises:
+			largo = len(p)
+			print(f"{p} tiene {largo} caracteres")
+			
+		10. RANGE (SE USA EN LOOPS) - Devuelve un rango de números, especificado dentro como parametros)
+			
+			mirango = range(6)		-> números de 0 a 5
+			mirango = range(6,11)	-> números de 6 a 10
+			mirango = range(6,11,2)	-> números del 6 al 10 pero de 2 en 2, es decir, sacaría los pares
+			
+		11. LOOPS: WHILE
+				c = 0
+				while contador <500:
+					c +=1
+					if c == 100:
+						break
+		12. FUNCIONES
+		
+			-- Procedimiento
+			def saludar():
+				print("hola mundo")
+				
+			-- Función
+			def sumar(a,b):
+				resultado = a + b
+				return resultado
+			
+		13.PANDAS (biblioteca de software que agrega funcionalidades a python para la manipulación  y el análisis de datos) Data Science
+		
+			in [*]: import pandas as pd
+			
+		14. CONFIGURACION MANUAL DE CARPETA DE JUPYTER (SI QUIERO QUE NO SEA LA PREDETERMINADA)
+			1. busco anaconda prompt y lo ejecuto como admin
+			2. c:\.....\jupyter notebook --generate-config
+			3. Me da un path y un fichero de configuracion tal como este: c:\users\........\jupyter_notebook_config.py
+			4. Lo edito xq aqui es donde se configura jupyter
+			5. Dentro del archivo, buscamos (ctrl+b) = .notebook_dir
+			
+		15. DataFrame y Series
+		
+			import pandas as pd
+			df = pd.read_csv("c:/temp/precipitaciones.csv")
+			df.head()
+			df.tail()
+			
+			df.shape
+			df.columns
+			df.index
+			
+			df.info()
+			
+			df.describe()		--> valores estadisticos sobre datos numericos, tales como min, max, count, std, etc.....
+			
+			--- Definicion de un DataFrame on scratch
+			datos = {"nombre":["Pedro","Juan","Lorena"], "edad":[25,39,33]}
+			
+			-- Definición de un Series on scratch
+			letras = ["a","b","c","d"]
+			nums = [10,20,30,40]
+			serie_con_indices = pd.Series(nums,letras)
+			
+			
+			
+		
+		
+		
+		
+		
+		
+		100. LINKS INTERESANTES DE PYTHON
+		
+			1. https://desktop.arcgis.com/es/arcmap/latest/analyze/python/setting-paths-to-data.htm -> Rutas de acceso a datos en python
+			
+		
+		
